@@ -1,9 +1,19 @@
 {
   "repositories": {
-    "courses": {
-      "upstream": "https://github.com/nuthalapatideepika/courses.git",
-      "branch": "main"
-    },
+    // ─── Temporarily disabled (upstream 404) ─────────────────────────────────────
+    // "courses": {
+    //   "upstream": "https://github.com/nuthalapatideepika/courses.git",
+    //   "branch": "main"
+    // },
+    // "evidenceOfCovid": {
+    //   "upstream": "https://github.com/2ai-lab/evidenceOfCovid.git",
+    //   "branch": "main"
+    // },
+    // "doubleDistilBERT": {
+    //   "upstream": "https://github.com/2ai-lab/doubleDistilBERT.git",
+    //   "branch": "main"
+    // },
+
     "2ai-lab.github.io": {
       "upstream": "https://github.com/2ai-lab/2ai-lab.github.io.git",
       "branch": "main"
@@ -124,10 +134,6 @@
       "upstream": "https://github.com/2ai-lab/Winsor-CAM-demo.git",
       "branch": "main"
     },
-    "evidenceOfCovid": {
-      "upstream": "https://github.com/2ai-lab/evidenceOfCovid.git",
-      "branch": "main"
-    },
     "ecg-classification": {
       "upstream": "https://github.com/2ai-lab/ecg-classification.git",
       "branch": "main"
@@ -135,10 +141,6 @@
     "Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease": {
       "upstream": "https://github.com/2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease.git",
       "branch": "master"
-    },
-    "doubleDistilBERT": {
-      "upstream": "https://github.com/2ai-lab/doubleDistilBERT.git",
-      "branch": "main"
     },
     "PATL": {
       "upstream": "https://github.com/2ai-lab/PATL.git",
