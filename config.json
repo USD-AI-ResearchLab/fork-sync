@@ -1,151 +1,151 @@
 {
   "repositories": {
     "courses": {
-      "upstream": "nuthalapatideepika/courses",
+      "upstream": "https://github.com/nuthalapatideepika/courses.git",
       "branch": "main"
     },
     "2ai-lab.github.io": {
-      "upstream": "2ai-lab/2ai-lab.github.io",
+      "upstream": "https://github.com/2ai-lab/2ai-lab.github.io.git",
       "branch": "main"
     },
     "attnconcat": {
-      "upstream": "2ai-lab/attnconcat",
+      "upstream": "https://github.com/2ai-lab/attnconcat.git",
       "branch": "main"
     },
     "LLNs-for-Early-Breast-Cancer-Detection": {
-      "upstream": "2ai-lab/LLNs-for-Early-Breast-Cancer-Detection",
+      "upstream": "https://github.com/2ai-lab/LLNs-for-Early-Breast-Cancer-Detection.git",
       "branch": "main"
     },
     "Active-Learning": {
-      "upstream": "2ai-lab/Active-Learning",
+      "upstream": "https://github.com/2ai-lab/Active-Learning.git",
       "branch": "main"
     },
     "DeepWhaleNet": {
-      "upstream": "2ai-lab/DeepWhaleNet",
+      "upstream": "https://github.com/2ai-lab/DeepWhaleNet.git",
       "branch": "main"
     },
     "Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading": {
-      "upstream": "2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading",
+      "upstream": "https://github.com/2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading.git",
       "branch": "main"
     },
     "Multimodal_Learning": {
-      "upstream": "2ai-lab/Multimodal_Learning",
+      "upstream": "https://github.com/2ai-lab/Multimodal_Learning.git",
       "branch": "main"
     },
     "explorers": {
-      "upstream": "2ai-lab/explorers",
+      "upstream": "https://github.com/2ai-lab/explorers.git",
       "branch": "main"
     },
     "sanskrit_maskedlm": {
-      "upstream": "2ai-lab/sanskrit_maskedlm",
+      "upstream": "https://github.com/2ai-lab/sanskrit_maskedlm.git",
       "branch": "main"
     },
     "Machine-Learning-Implementation": {
-      "upstream": "2ai-lab/Machine-Learning-Implementation",
+      "upstream": "https://github.com/2ai-lab/Machine-Learning-Implementation.git",
       "branch": "main"
     },
     "Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement": {
-      "upstream": "2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement",
+      "upstream": "https://github.com/2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement.git",
       "branch": "main"
     },
     "demo-repository": {
-      "upstream": "2ai-lab/demo-repository",
+      "upstream": "https://github.com/2ai-lab/demo-repository.git",
       "branch": "main"
     },
     "ml-book-technicalities-innovation": {
-      "upstream": "2ai-lab/ml-book-technicalities-innovation",
+      "upstream": "https://github.com/2ai-lab/ml-book-technicalities-innovation.git",
       "branch": "main"
     },
     "Report-Generation": {
-      "upstream": "2ai-lab/Report-Generation",
+      "upstream": "https://github.com/2ai-lab/Report-Generation.git",
       "branch": "main"
     },
     "multimodal-emotion": {
-      "upstream": "2ai-lab/multimodal-emotion",
+      "upstream": "https://github.com/2ai-lab/multimodal-emotion.git",
       "branch": "master"
     },
     "Superpixels-in-graph-neural-network": {
-      "upstream": "2ai-lab/Superpixels-in-graph-neural-network",
+      "upstream": "https://github.com/2ai-lab/Superpixels-in-graph-neural-network.git",
       "branch": "master"
     },
     "Ensemble-DCNN": {
-      "upstream": "2ai-lab/Ensemble-DCNN",
+      "upstream": "https://github.com/2ai-lab/Ensemble-DCNN.git",
       "branch": "main"
     },
     "deep-features-covid-screening": {
-      "upstream": "2ai-lab/deep-features-covid-screening",
+      "upstream": "https://github.com/2ai-lab/deep-features-covid-screening.git",
       "branch": "main"
     },
     "streamlit-image-classification": {
-      "upstream": "2ai-lab/streamlit-image-classification",
+      "upstream": "https://github.com/2ai-lab/streamlit-image-classification.git",
       "branch": "master"
     },
     "2AI-Club-Presentations": {
-      "upstream": "2ai-lab/2AI-Club-Presentations",
+      "upstream": "https://github.com/2ai-lab/2AI-Club-Presentations.git",
       "branch": "main"
     },
     "2AI-Club-Code": {
-      "upstream": "2ai-lab/2AI-Club-Code",
+      "upstream": "https://github.com/2ai-lab/2AI-Club-Code.git",
       "branch": "main"
     },
     "flax": {
-      "upstream": "https://github.com/2ai-lab/flax",
+      "upstream": "https://github.com/2ai-lab/flax.git",
       "branch": "main"
     },
     "medical-imaging-datasets": {
-      "upstream": "2ai-lab/medical-imaging-datasets",
+      "upstream": "https://github.com/2ai-lab/medical-imaging-datasets.git",
       "branch": "master"
     },
     "python-series": {
-      "upstream": "2ai-lab/python-series",
+      "upstream": "https://github.com/2ai-lab/python-series.git",
       "branch": "main"
     },
     "Graph-Neural-Network": {
-      "upstream": "2ai-lab/Graph-Neural-Network",
+      "upstream": "https://github.com/2ai-lab/Graph-Neural-Network.git",
       "branch": "main"
     },
     "Machine-Learning-Tools": {
-      "upstream": "2ai-lab/Machine-Learning-Tools",
+      "upstream": "https://github.com/2ai-lab/Machine-Learning-Tools.git",
       "branch": "main"
     },
     "Aneurysm_Detection": {
-      "upstream": "2ai-lab/Aneurysm_Detection",
+      "upstream": "https://github.com/2ai-lab/Aneurysm_Detection.git",
       "branch": "main"
     },
     "quant-club-website": {
-      "upstream": "2ai-lab/quant-club-website",
+      "upstream": "https://github.com/2ai-lab/quant-club-website.git",
       "branch": "main"
     },
     "2ai-club.github.io": {
-      "upstream": "2ai-lab/2ai-club.github.io",
+      "upstream": "https://github.com/2ai-lab/2ai-club.github.io.git",
       "branch": "main"
     },
     "Winsor-CAM-demo": {
-      "upstream": "2ai-lab/Winsor-CAM-demo",
+      "upstream": "https://github.com/2ai-lab/Winsor-CAM-demo.git",
       "branch": "main"
     },
     "evidenceOfCovid": {
-      "upstream": "2ai-lab/evidenceOfCovid",
+      "upstream": "https://github.com/2ai-lab/evidenceOfCovid.git",
       "branch": "main"
     },
     "ecg-classification": {
-      "upstream": "2ai-lab/ecg-classification",
+      "upstream": "https://github.com/2ai-lab/ecg-classification.git",
       "branch": "main"
     },
     "Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease": {
-      "upstream": "2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease",
+      "upstream": "https://github.com/2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease.git",
       "branch": "master"
     },
     "doubleDistilBERT": {
-      "upstream": "2ai-lab/doubleDistilBERT",
+      "upstream": "https://github.com/2ai-lab/doubleDistilBERT.git",
       "branch": "main"
     },
     "PATL": {
-      "upstream": "2ai-lab/PATL",
+      "upstream": "https://github.com/2ai-lab/PATL.git",
       "branch": "main"
     },
     "yolov7": {
-      "upstream": "2ai-lab/yolov7",
+      "upstream": "https://github.com/2ai-lab/yolov7.git",
       "branch": "main"
     }
   }
