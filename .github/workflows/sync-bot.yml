@@ -1,33 +1,43 @@
-name: Fork Sync 
+name: Fork Sync Bot
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # every day at 6 AM UTC
-  workflow_dispatch:
-
-env:
-  GITHUB_OWNER: USD-AI-ResearchLab
+    - cron: "0 9 * * *"   # every day at 9:00 UTC
+  workflow_dispatch:       # allow manual trigger
 
 jobs:
-  sync-forks:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout this repo
       - name: Checkout bot repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
+      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
 
+      # Install dependencies
       - name: Install dependencies
         run: |
-          pip install PyGithub requests
+          python -m pip install --upgrade pip
+          pip install requests pyyaml
 
+      # Debug to ensure secret exists
+      - name: Debug BOT_TOKEN secret
+        run: |
+          if [ -z "${{ secrets.BOT_TOKEN }}" ]; then
+            echo " BOT_TOKEN secret is NOT available"
+            exit 1
+          else
+            echo " BOT_TOKEN secret is set"
+          fi
+
+      # Run sync bot
       - name: Run sync bot
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-          GITHUB_OWNER: ${{ env.GITHUB_OWNER }}
-        run: |
-          python sync_bot.py
+          GITHUB_OWNER: USD-AI-ResearchLab   # your org name
+          GITHUB_TOKEN: ${{_
