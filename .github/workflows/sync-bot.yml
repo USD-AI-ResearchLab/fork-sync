@@ -2,39 +2,79 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # run every day at 9:00 UTC
+    - cron: "0 9 * * *"   # run every day at 09:00 UTC
   workflow_dispatch:       # allow manual trigger
+
+# Avoid overlapping runs if one is still going
+concurrency:
+  group: fork-sync
+  cancel-in-progress: true
+
+# Job-level default permissions (PAT in BOT_TOKEN drives cross-repo actions)
+permissions:
+  contents: read
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout bot repository
         uses: actions/checkout@v4
+        with:
+          # full history isn't strictly required, but helps if your bot reads git metadata
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: "3.11"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ steps.pyver.outputs.py }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Record Python version (for cache key)
+        id: pyver
+        run: |
+          echo "py=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))')" >> "$GITHUB_OUTPUT"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install PyGithub requests
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install PyGithub requests
+          fi
 
-      - name: Debug BOT_TOKEN
+      - name: Verify BOT_TOKEN presence (no secret value printed)
         run: |
           if [ -z "${{ secrets.BOT_TOKEN }}" ]; then
-            echo " BOT_TOKEN is empty"
+            echo "::error title=Missing secret::BOT_TOKEN is not set in repository/org secrets."
             exit 1
           else
-            echo " BOT_TOKEN is available"
+            echo "::notice title=Secret OK::BOT_TOKEN is configured."
+          fi
+
+      - name: Verify entrypoint script exists
+        run: |
+          if [ ! -f sync_bot.py ]; then
+            echo "::error title=Missing file::sync_bot.py not found at repo root."
+            exit 1
           fi
 
       - name: Run sync bot
         env:
+          # Use your fine-grained PAT here; do NOT rely on the default GITHUB_TOKEN for cross-repo PRs
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
           GITHUB_OWNER: USD-AI-ResearchLab
+          # Optional extras your script can read (use or ignore)
+          LOG_LEVEL: INFO
         run: |
           python sync_bot.py
