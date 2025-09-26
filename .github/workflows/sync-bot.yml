@@ -1,4 +1,4 @@
-name: Fork Sync Bot
+name: Fork Sync
 
 on:
   schedule:
