@@ -23,9 +23,44 @@ class ForkSyncBot:
         
         # Repositories to monitor (you'll customize this list)
         self.monitored_repos = [
-            # Add your repository names here
-            # Example: 'awesome-ai-project',
-            # Example: 'research-tools',
+courses
+2ai-lab.github.io
+attnconcat
+LLNs-for-Early-Breast-Cancer-Detection
+Active-Learning
+DeepWhaleNet
+Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading
+Multimodal_Learning
+explorers
+sanskrit_maskedlm
+Machine-Learning-Implementation
+Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement
+demo-repository
+ml-book-technicalities-innovation
+Report-Generation
+multimodal-emotion
+Superpixels-in-graph-neural-network
+Ensemble-DCNN
+deep-features-covid-screening
+streamlit-image-classification
+2AI-Club-Presentations
+2AI-Club-Code
+flax
+medical-imaging-datasets
+python-series
+Graph-Neural-Network
+Machine-Learning-Tools
+Aneurysm_Detection
+quant-club-website
+2ai-club.github.io
+Winsor-CAM-demo
+evidenceOfCovid
+ecg-classification
+Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease
+doubleDistilBERT
+PATL
+yolov7
+
         ]
         
         print(f"🤖 Fork Sync Bot initialized for {self.github_owner}")
