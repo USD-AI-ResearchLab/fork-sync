@@ -1,16 +1,12 @@
-name: Fork Sync Bot
+name: Fork Sync 
 
-# Run every day at 6 AM UTC (adjust timezone as needed)
 on:
   schedule:
-    - cron: '0 6 * * *'
-  
-  # Also allow manual triggering
+    - cron: '0 6 * * *'   # Run every day at 6 AM UTC
   workflow_dispatch:
 
 env:
-  # Your GitHub username/organization
-  GITHUB_OWNER: USD-AI-ResearchLab
+  GITHUB_OWNER: USD-AI-ResearchLab   # change to your GitHub username if repos are under your account
 
 jobs:
   sync-forks:
@@ -31,7 +27,7 @@ jobs:
         
     - name: Run sync bot
       env:
-        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # ✅ fixed
         GITHUB_OWNER: ${{ env.GITHUB_OWNER }}
       run: |
         python sync_bot.py
