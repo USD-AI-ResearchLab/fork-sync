@@ -1,31 +1,152 @@
 {
   "repositories": {
-    "Machine-Learning-Implementation": "2ai-lab/Machine-Learning-Implementation",
-    "Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement": "2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement",
-    "demo-repository": "2ai-lab/demo-repository",
-    "ml-book-technicalities-innovation": "2ai-lab/ml-book-technicalities-innovation",
-    "Report-Generation": "2ai-lab/Report-Generation",
-    "multimodal-emotion": "2ai-lab/multimodal-emotion",
-    "Superpixels-in-graph-neural-network": "2ai-lab/Superpixels-in-graph-neural-network",
-    "Ensemble-DCNN": "2ai-lab/Ensemble-DCNN",
-    "deep-features-covid-screening": "2ai-lab/deep-features-covid-screening",
-    "streamlit-image-classification": "2ai-lab/streamlit-image-classification",
-    "2AI-Club-Presentations": "2ai-lab/2AI-Club-Presentations",
-    "2AI-Club-Code": "2ai-lab/2AI-Club-Code",
-    "flax": "google/flax",
-    "medical-imaging-datasets": "2ai-lab/medical-imaging-datasets",
-    "python-series": "2ai-lab/python-series",
-    "Graph-Neural-Network": "2ai-lab/Graph-Neural-Network",
-    "Machine-Learning-Tools": "2ai-lab/Machine-Learning-Tools",
-    "Aneurysm_Detection": "2ai-lab/Aneurysm_Detection",
-    "quant-club-website": "2ai-lab/quant-club-website",
-    "2ai-club.github.io": "2ai-lab/2ai-club.github.io",
-    "Winsor-CAM-demo": "2ai-lab/Winsor-CAM-demo",
-    "evidenceOfCovid": "2ai-lab/evidenceOfCovid",
-    "ecg-classification": "2ai-lab/ecg-classification",
-    "Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease": "2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease",
-    "doubleDistilBERT": "2ai-lab/doubleDistilBERT",
-    "PATL": "2ai-lab/PATL",
-    "yolov7": "WongKinYiu/yolov7"
+    "courses": {
+      "upstream": "nuthalapatideepika/courses",
+      "branch": "main"
+    },
+    "2ai-lab.github.io": {
+      "upstream": "2ai-lab/2ai-lab.github.io",
+      "branch": "main"
+    },
+    "attnconcat": {
+      "upstream": "2ai-lab/attnconcat",
+      "branch": "main"
+    },
+    "LLNs-for-Early-Breast-Cancer-Detection": {
+      "upstream": "2ai-lab/LLNs-for-Early-Breast-Cancer-Detection",
+      "branch": "main"
+    },
+    "Active-Learning": {
+      "upstream": "2ai-lab/Active-Learning",
+      "branch": "main"
+    },
+    "DeepWhaleNet": {
+      "upstream": "2ai-lab/DeepWhaleNet",
+      "branch": "main"
+    },
+    "Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading": {
+      "upstream": "2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading",
+      "branch": "main"
+    },
+    "Multimodal_Learning": {
+      "upstream": "2ai-lab/Multimodal_Learning",
+      "branch": "main"
+    },
+    "explorers": {
+      "upstream": "2ai-lab/explorers",
+      "branch": "main"
+    },
+    "sanskrit_maskedlm": {
+      "upstream": "2ai-lab/sanskrit_maskedlm",
+      "branch": "main"
+    },
+    "Machine-Learning-Implementation": {
+      "upstream": "2ai-lab/Machine-Learning-Implementation",
+      "branch": "main"
+    },
+    "Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement": {
+      "upstream": "2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement",
+      "branch": "main"
+    },
+    "demo-repository": {
+      "upstream": "2ai-lab/demo-repository",
+      "branch": "main"
+    },
+    "ml-book-technicalities-innovation": {
+      "upstream": "2ai-lab/ml-book-technicalities-innovation",
+      "branch": "main"
+    },
+    "Report-Generation": {
+      "upstream": "2ai-lab/Report-Generation",
+      "branch": "main"
+    },
+    "multimodal-emotion": {
+      "upstream": "2ai-lab/multimodal-emotion",
+      "branch": "master"
+    },
+    "Superpixels-in-graph-neural-network": {
+      "upstream": "2ai-lab/Superpixels-in-graph-neural-network",
+      "branch": "master"
+    },
+    "Ensemble-DCNN": {
+      "upstream": "2ai-lab/Ensemble-DCNN",
+      "branch": "main"
+    },
+    "deep-features-covid-screening": {
+      "upstream": "2ai-lab/deep-features-covid-screening",
+      "branch": "main"
+    },
+    "streamlit-image-classification": {
+      "upstream": "2ai-lab/streamlit-image-classification",
+      "branch": "master"
+    },
+    "2AI-Club-Presentations": {
+      "upstream": "2ai-lab/2AI-Club-Presentations",
+      "branch": "main"
+    },
+    "2AI-Club-Code": {
+      "upstream": "2ai-lab/2AI-Club-Code",
+      "branch": "main"
+    },
+    "flax": {
+      "upstream": "https://github.com/2ai-lab/flax",
+      "branch": "main"
+    },
+    "medical-imaging-datasets": {
+      "upstream": "2ai-lab/medical-imaging-datasets",
+      "branch": "master"
+    },
+    "python-series": {
+      "upstream": "2ai-lab/python-series",
+      "branch": "main"
+    },
+    "Graph-Neural-Network": {
+      "upstream": "2ai-lab/Graph-Neural-Network",
+      "branch": "main"
+    },
+    "Machine-Learning-Tools": {
+      "upstream": "2ai-lab/Machine-Learning-Tools",
+      "branch": "main"
+    },
+    "Aneurysm_Detection": {
+      "upstream": "2ai-lab/Aneurysm_Detection",
+      "branch": "main"
+    },
+    "quant-club-website": {
+      "upstream": "2ai-lab/quant-club-website",
+      "branch": "main"
+    },
+    "2ai-club.github.io": {
+      "upstream": "2ai-lab/2ai-club.github.io",
+      "branch": "main"
+    },
+    "Winsor-CAM-demo": {
+      "upstream": "2ai-lab/Winsor-CAM-demo",
+      "branch": "main"
+    },
+    "evidenceOfCovid": {
+      "upstream": "2ai-lab/evidenceOfCovid",
+      "branch": "main"
+    },
+    "ecg-classification": {
+      "upstream": "2ai-lab/ecg-classification",
+      "branch": "main"
+    },
+    "Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease": {
+      "upstream": "2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease",
+      "branch": "master"
+    },
+    "doubleDistilBERT": {
+      "upstream": "2ai-lab/doubleDistilBERT",
+      "branch": "main"
+    },
+    "PATL": {
+      "upstream": "2ai-lab/PATL",
+      "branch": "main"
+    },
+    "yolov7": {
+      "upstream": "2ai-lab/yolov7",
+      "branch": "main"
+    }
   }
 }
