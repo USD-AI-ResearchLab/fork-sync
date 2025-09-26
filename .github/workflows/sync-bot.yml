@@ -1,0 +1,37 @@
+name: Fork Sync Bot
+
+# Run every day at 6 AM UTC (adjust timezone as needed)
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Also allow manual triggering
+  workflow_dispatch:
+
+env:
+  # Your GitHub username/organization
+  GITHUB_OWNER: USD-AI-ResearchLab
+
+jobs:
+  sync-forks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout sync bot repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install PyGithub requests
+        
+    - name: Run sync bot
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GITHUB_OWNER: ${{ env.GITHUB_OWNER }}
+      run: |
+        python sync_bot.py
