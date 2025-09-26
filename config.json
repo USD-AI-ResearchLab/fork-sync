@@ -1,0 +1,15 @@
+{
+  "monitored_repositories": [
+    "your-repo-name-1",
+    "your-repo-name-2"
+  ],
+  "sync_schedule": "daily",
+  "auto_merge_trusted_users": [
+    "trusted-collaborator-1",
+    "trusted-collaborator-2"
+  ],
+  "notifications": {
+    "email": "your-email@example.com",
+    "slack_webhook": ""
+  }
+}
