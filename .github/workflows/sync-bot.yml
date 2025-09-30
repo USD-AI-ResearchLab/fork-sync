@@ -2,7 +2,7 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "30 4 * * *"   # run every day at 09:00 UTC
+    - cron: "0 17 * * *"   # run every day at 11:00 AM CST (17:00 UTC)
   workflow_dispatch:       # allow manual trigger
 
 # Avoid overlapping runs if one is still going
