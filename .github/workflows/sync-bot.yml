@@ -2,22 +2,33 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "20 16 * * *"   # 11:05 AM CST = 17:00 UTC
+    # Always 11:20 AM America/Chicago (DST-aware) using two UTC crons
+    - cron: "20 16 * * *"   # 11:20 during CDT (UTC-5)
+    - cron: "20 17 * * *"   # 11:20 during CST (UTC-6)
   workflow_dispatch:
-
-concurrency:
-  group: fork-sync
-  cancel-in-progress: true
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    env:
+      # Make tokens visible to the Python script
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      FORK_SYNC_TOKEN: ${{ secrets.FORK_SYNC_TOKEN }}
+      GITHUB_OWNER: USD-AI-ResearchLab
+      GIT_TERMINAL_PROMPT: "0"
 
     steps:
+      - name: Run only at 11:20 America/Chicago
+        run: |
+          if [ "$(TZ=America/Chicago date +%H:%M)" != "11:20" ]; then
+            echo "Not 11:20 America/Chicago; exiting."
+            exit 0
+          fi
+
       - name: Checkout bot repository
         uses: actions/checkout@v4
         with:
@@ -43,10 +54,10 @@ jobs:
           test -f sync_bot.py || (echo "::error::sync_bot.py missing"; exit 1)
           test -f repos.yml   || (echo "::error::repos.yml missing"; exit 1)
 
-      - name: Run sync bot
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}      # Fine-grained PAT / App token
-          GITHUB_OWNER: USD-AI-ResearchLab            # your org
-          LOG_LEVEL: INFO
+      - name: Hardening git (no extra headers, no prompts)
         run: |
-          python sync_bot.py
+          git config --global credential.helper ""
+          git config --global http.https://github.com/.extraheader ""
+
+      - name: Run sync bot
+        run: python sync_bot.py
