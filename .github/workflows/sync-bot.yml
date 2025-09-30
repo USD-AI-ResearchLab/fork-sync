@@ -3,11 +3,14 @@ name: Fork Sync
 on:
   schedule:
     - cron: "0 */6 * * *"   # every 6 hours
-  workflow_dispatch:        # manual trigger
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    # Permissions here apply to the central repo only; pushing to other repos uses FORK_SYNC_TOKEN (a PAT).
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -21,5 +24,9 @@ jobs:
 
       - name: Run sync bot
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # REQUIRED: Org-level or repo secret. Classic PAT with "repo" + "read:org" scopes. Enable SSO if your org enforces it.
+          FORK_SYNC_TOKEN: ${{ secrets.FORK_SYNC_TOKEN }}
+          ORG_NAME: USD-AI-ResearchLab
+          # OPTIONAL: set to "true" to open a PR if direct push to protected default branch is blocked
+          FALLBACK_TO_PR: "true"
         run: python sync_bot.py
