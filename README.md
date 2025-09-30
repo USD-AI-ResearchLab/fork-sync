@@ -2,8 +2,6 @@
 
 [![Fork Sync](https://github.com/USD-AI-ResearchLab/fork-sync/actions/workflows/fork-sync.yml/badge.svg)](https://github.com/USD-AI-ResearchLab/fork-sync/actions/workflows/fork-sync.yml)
 
-
-
 Automated **synchronization service** to keep forks in the  
 [`USD-AI-ResearchLab`](https://github.com/USD-AI-ResearchLab) GitHub organization up to date with their upstream/original repositories.
 
