@@ -1,0 +1,9 @@
+forks:
+  - fork: USD-AI-ResearchLab/repo-one
+    upstream: https://github.com/OriginalOrg/repo-one.git
+    default_branch: main
+
+  - fork: USD-AI-ResearchLab/repo-two
+    upstream: https://github.com/OriginalOrg/repo-two.git
+    default_branch: master
+# add more…
