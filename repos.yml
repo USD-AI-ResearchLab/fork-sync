@@ -1,151 +1,188 @@
-forks:
-  - fork: USD-AI-ResearchLab/courses
+repositories:
+  courses:
     upstream: https://github.com/nuthalapatideepika/courses.git
-    default_branch: main
+    branch: main
     disabled: true
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/2ai-lab.github.io
+  2ai-lab.github.io:
     upstream: https://github.com/2ai-lab/2ai-lab.github.io.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/attnconcat
+  attnconcat:
     upstream: https://github.com/2ai-lab/attnconcat.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/LLNs-for-Early-Breast-Cancer-Detection
+  LLNs-for-Early-Breast-Cancer-Detection:
     upstream: https://github.com/2ai-lab/LLNs-for-Early-Breast-Cancer-Detection.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Active-Learning
+  Active-Learning:
     upstream: https://github.com/2ai-lab/Active-Learning.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/DeepWhaleNet
+  DeepWhaleNet:
     upstream: https://github.com/2ai-lab/DeepWhaleNet.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading
+  Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading:
     upstream: https://github.com/2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Multimodal_Learning
+  Multimodal_Learning:
     upstream: https://github.com/2ai-lab/Multimodal_Learning.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/explorers
+  explorers:
     upstream: https://github.com/2ai-lab/explorers.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/sanskrit_maskedlm
+  sanskrit_maskedlm:
     upstream: https://github.com/2ai-lab/sanskrit_maskedlm.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Machine-Learning-Implementation
+  Machine-Learning-Implementation:
     upstream: https://github.com/2ai-lab/Machine-Learning-Implementation.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement
+  Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement:
     upstream: https://github.com/2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/demo-repository
+  demo-repository:
     upstream: https://github.com/2ai-lab/demo-repository.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/ml-book-technicalities-innovation
+  ml-book-technicalities-innovation:
     upstream: https://github.com/2ai-lab/ml-book-technicalities-innovation.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Report-Generation
+  Report-Generation:
     upstream: https://github.com/2ai-lab/Report-Generation.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/multimodal-emotion
+  multimodal-emotion:
     upstream: https://github.com/2ai-lab/multimodal-emotion.git
-    default_branch: master
+    branch: master
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Superpixels-in-graph-neural-network
+  Superpixels-in-graph-neural-network:
     upstream: https://github.com/2ai-lab/Superpixels-in-graph-neural-network.git
-    default_branch: master
+    branch: master
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Ensemble-DCNN
+  Ensemble-DCNN:
     upstream: https://github.com/2ai-lab/Ensemble-DCNN.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/deep-features-covid-screening
+  deep-features-covid-screening:
     upstream: https://github.com/2ai-lab/deep-features-covid-screening.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/streamlit-image-classification
+  streamlit-image-classification:
     upstream: https://github.com/2ai-lab/streamlit-image-classification.git
-    default_branch: master
+    branch: master
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/2AI-Club-Presentations
+  2AI-Club-Presentations:
     upstream: https://github.com/2ai-lab/2AI-Club-Presentations.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/2AI-Club-Code
+  2AI-Club-Code:
     upstream: https://github.com/2ai-lab/2AI-Club-Code.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/flax
+  flax:
     upstream: https://github.com/2ai-lab/flax.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/medical-imaging-datasets
+  medical-imaging-datasets:
     upstream: https://github.com/2ai-lab/medical-imaging-datasets.git
-    default_branch: master
+    branch: master
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/python-series
+  python-series:
     upstream: https://github.com/2ai-lab/python-series.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Graph-Neural-Network
+  Graph-Neural-Network:
     upstream: https://github.com/2ai-lab/Graph-Neural-Network.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Machine-Learning-Tools
+  Machine-Learning-Tools:
     upstream: https://github.com/2ai-lab/Machine-Learning-Tools.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Aneurysm_Detection
+  Aneurysm_Detection:
     upstream: https://github.com/2ai-lab/Aneurysm_Detection.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/quant-club-website
+  quant-club-website:
     upstream: https://github.com/2ai-lab/quant-club-website.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/2ai-club.github.io
+  2ai-club.github.io:
     upstream: https://github.com/2ai-lab/2ai-club.github.io.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Winsor-CAM-demo
+  Winsor-CAM-demo:
     upstream: https://github.com/2ai-lab/Winsor-CAM-demo.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/evidenceOfCovid
+  evidenceOfCovid:
     upstream: https://github.com/2ai-lab/evidenceOfCovid.git
-    default_branch: main
+    branch: main
     disabled: true
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/ecg-classification
+  ecg-classification:
     upstream: https://github.com/2ai-lab/ecg-classification.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease
+  Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease:
     upstream: https://github.com/2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease.git
-    default_branch: master
+    branch: master
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/doubleDistilBERT
+  doubleDistilBERT:
     upstream: https://github.com/2ai-lab/doubleDistilBERT.git
-    default_branch: main
+    branch: main
     disabled: true
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/PATL
+  PATL:
     upstream: https://github.com/2ai-lab/PATL.git
-    default_branch: main
+    branch: main
+    mode: mirror
 
-  - fork: USD-AI-ResearchLab/yolov7
+  yolov7:
     upstream: https://github.com/2ai-lab/yolov7.git
-    default_branch: main
+    branch: main
+    mode: mirror
