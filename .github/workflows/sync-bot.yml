@@ -2,17 +2,15 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "0 17 * * *"   # run every day at 11:00 AM CST (17:00 UTC)
-  workflow_dispatch:       # allow manual trigger
+    - cron: "0 17 * * *"   # 11:00 AM CST = 17:00 UTC
+  workflow_dispatch:
 
-# Avoid overlapping runs if one is still going
 concurrency:
   group: fork-sync
   cancel-in-progress: true
 
-# Job-level default permissions (PAT in BOT_TOKEN drives cross-repo actions)
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   sync:
@@ -23,7 +21,6 @@ jobs:
       - name: Checkout bot repository
         uses: actions/checkout@v4
         with:
-          # full history isn't strictly required, but helps if your bot reads git metadata
           fetch-depth: 0
 
       - name: Set up Python
@@ -31,50 +28,25 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ steps.pyver.outputs.py }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Record Python version (for cache key)
-        id: pyver
-        run: |
-          echo "py=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))')" >> "$GITHUB_OUTPUT"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install PyGithub requests
-          fi
+          pip install PyGithub pyyaml
 
-      - name: Verify BOT_TOKEN presence (no secret value printed)
+      - name: Configure git identity
         run: |
-          if [ -z "${{ secrets.BOT_TOKEN }}" ]; then
-            echo "::error title=Missing secret::BOT_TOKEN is not set in repository/org secrets."
-            exit 1
-          else
-            echo "::notice title=Secret OK::BOT_TOKEN is configured."
-          fi
+          git config --global user.name "usd-ai-sync-bot"
+          git config --global user.email "bot@ai-research-lab.org"
 
-      - name: Verify entrypoint script exists
+      - name: Verify required files
         run: |
-          if [ ! -f sync_bot.py ]; then
-            echo "::error title=Missing file::sync_bot.py not found at repo root."
-            exit 1
-          fi
+          test -f sync_bot.py || (echo "::error::sync_bot.py missing"; exit 1)
+          test -f repos.yml   || (echo "::error::repos.yml missing"; exit 1)
 
       - name: Run sync bot
         env:
-          # Use your fine-grained PAT here; do NOT rely on the default GITHUB_TOKEN for cross-repo PRs
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-          GITHUB_OWNER: USD-AI-ResearchLab
-          # Optional extras your script can read (use or ignore)
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}      # Fine-grained PAT / App token
+          GITHUB_OWNER: USD-AI-ResearchLab            # your org
           LOG_LEVEL: INFO
         run: |
           python sync_bot.py
