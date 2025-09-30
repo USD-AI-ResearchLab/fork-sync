@@ -2,55 +2,24 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "20 16 * * *"
-    - cron: "20 17 * * *"
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # manual trigger
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      FORK_SYNC_TOKEN: ${{ secrets.FORK_SYNC_TOKEN }}
-      GITHUB_OWNER: USD-AI-ResearchLab
-      GIT_TERMINAL_PROMPT: "0"
-
     steps:
-      - name: Run only at 11:20 America/Chicago
-        run: |
-          if [ "$(TZ=America/Chicago date +%H:%M)" != "11:20" ]; then
-            echo "Not 11:20 America/Chicago; exiting."
-            exit 0
-          fi
+      - uses: actions/checkout@v4
 
-      - name: Checkout bot repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.x"
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install PyGithub pyyaml
-
-      - name: Configure git identity
-        run: |
-          git config --global user.name "usd-ai-sync-bot"
-          git config --global user.email "bot@ai-research-lab.org"
-
-      - name: Verify required files
-        run: |
-          test -f sync_bot.py || (echo "::error::sync_bot.py missing"; exit 1)
-          test -f repos.yml   || (echo "::error::repos.yml missing"; exit 1)
+        run: pip install PyGithub pyyaml
 
       - name: Run sync bot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python sync_bot.py
