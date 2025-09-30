@@ -2,7 +2,7 @@ name: Fork Sync
 
 on:
   schedule:
-    - cron: "0 17 * * *"   # 11:00 AM CST = 17:00 UTC
+    - cron: "05 17 * * *"   # 11:05 AM CST = 17:00 UTC
   workflow_dispatch:
 
 concurrency:
