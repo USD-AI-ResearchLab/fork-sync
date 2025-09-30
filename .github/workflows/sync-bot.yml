@@ -52,10 +52,5 @@ jobs:
           test -f sync_bot.py || (echo "::error::sync_bot.py missing"; exit 1)
           test -f repos.yml   || (echo "::error::repos.yml missing"; exit 1)
 
-      - name: Hardening git (no extra headers, no prompts)
-        run: |
-          git config --global credential.helper ""
-          git config --global http.https://github.com/.extraheader ""
-
       - name: Run sync bot
         run: python sync_bot.py
