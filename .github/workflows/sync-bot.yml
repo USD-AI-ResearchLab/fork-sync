@@ -2,9 +2,8 @@ name: Fork Sync
 
 on:
   schedule:
-    # Always 11:20 AM America/Chicago (DST-aware) using two UTC crons
-    - cron: "20 16 * * *"   # 11:20 during CDT (UTC-5)
-    - cron: "20 17 * * *"   # 11:20 during CST (UTC-6)
+    - cron: "20 16 * * *"
+    - cron: "20 17 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,7 +14,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      # Make tokens visible to the Python script
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FORK_SYNC_TOKEN: ${{ secrets.FORK_SYNC_TOKEN }}
       GITHUB_OWNER: USD-AI-ResearchLab
