@@ -1,188 +1,144 @@
-repositories:
-  courses:
-    upstream: https://github.com/nuthalapatideepika/courses.git
-    branch: main
-    disabled: true
-    mode: mirror
+repos:
+  - name: python-series
+    fork: USD-AI-ResearchLab/python-series
+    upstream: 2ai-lab/python-series
 
-  2ai-lab.github.io:
-    upstream: https://github.com/2ai-lab/2ai-lab.github.io.git
-    branch: main
-    mode: mirror
+  - name: medical-imaging-datasets
+    fork: USD-AI-ResearchLab/medical-imaging-datasets
+    upstream: 2ai-lab/medical-imaging-datasets
 
-  attnconcat:
-    upstream: https://github.com/2ai-lab/attnconcat.git
-    branch: main
-    mode: mirror
+  - name: flax
+    fork: USD-AI-ResearchLab/flax
+    upstream: 2ai-lab/flax
 
-  LLNs-for-Early-Breast-Cancer-Detection:
-    upstream: https://github.com/2ai-lab/LLNs-for-Early-Breast-Cancer-Detection.git
-    branch: main
-    mode: mirror
+  - name: 2AI-Club-Code
+    fork: USD-AI-ResearchLab/2AI-Club-Code
+    upstream: 2ai-lab/2AI-Club-Code
 
-  Active-Learning:
-    upstream: https://github.com/2ai-lab/Active-Learning.git
-    branch: main
-    mode: mirror
+  - name: 2AI-Club-Presentations
+    fork: USD-AI-ResearchLab/2AI-Club-Presentations
+    upstream: 2ai-lab/2AI-Club-Presentations
 
-  DeepWhaleNet:
-    upstream: https://github.com/2ai-lab/DeepWhaleNet.git
-    branch: main
-    mode: mirror
+  - name: streamlit-image-classification
+    fork: USD-AI-ResearchLab/streamlit-image-classification
+    upstream: 2ai-lab/streamlit-image-classification
 
-  Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading:
-    upstream: https://github.com/2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading.git
-    branch: main
-    mode: mirror
+  - name: deep-features-covid-screening
+    fork: USD-AI-ResearchLab/deep-features-covid-screening
+    upstream: 2ai-lab/deep-features-covid-screening
 
-  Multimodal_Learning:
-    upstream: https://github.com/2ai-lab/Multimodal_Learning.git
-    branch: main
-    mode: mirror
+  - name: Ensemble-DCNN
+    fork: USD-AI-ResearchLab/Ensemble-DCNN
+    upstream: 2ai-lab/Ensemble-DCNN
 
-  explorers:
-    upstream: https://github.com/2ai-lab/explorers.git
-    branch: main
-    mode: mirror
+  - name: Superpixels-in-graph-neural-network
+    fork: USD-AI-ResearchLab/Superpixels-in-graph-neural-network
+    upstream: 2ai-lab/Superpixels-in-graph-neural-network
 
-  sanskrit_maskedlm:
-    upstream: https://github.com/2ai-lab/sanskrit_maskedlm.git
-    branch: main
-    mode: mirror
+  - name: multimodal-emotion
+    fork: USD-AI-ResearchLab/multimodal-emotion
+    upstream: 2ai-lab/multimodal-emotion
 
-  Machine-Learning-Implementation:
-    upstream: https://github.com/2ai-lab/Machine-Learning-Implementation.git
-    branch: main
-    mode: mirror
+  - name: Report-Generation
+    fork: USD-AI-ResearchLab/Report-Generation
+    upstream: 2ai-lab/Report-Generation
 
-  Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement:
-    upstream: https://github.com/2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement.git
-    branch: main
-    mode: mirror
+  - name: ml-book-technicalities-innovation
+    fork: USD-AI-ResearchLab/ml-book-technicalities-innovation
+    upstream: 2ai-lab/ml-book-technicalities-innovation
 
-  demo-repository:
-    upstream: https://github.com/2ai-lab/demo-repository.git
-    branch: main
-    mode: mirror
+  - name: demo-repository
+    fork: USD-AI-ResearchLab/demo-repository
+    upstream: 2ai-lab/demo-repository
 
-  ml-book-technicalities-innovation:
-    upstream: https://github.com/2ai-lab/ml-book-technicalities-innovation.git
-    branch: main
-    mode: mirror
+  - name: Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement
+    fork: USD-AI-ResearchLab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement
+    upstream: 2ai-lab/Improving-Robustness-of-Convolutional-Neural-Networks-through-Symmetry-Enforcement
 
-  Report-Generation:
-    upstream: https://github.com/2ai-lab/Report-Generation.git
-    branch: main
-    mode: mirror
+  - name: Machine-Learning-Implementation
+    fork: USD-AI-ResearchLab/Machine-Learning-Implementation
+    upstream: 2ai-lab/Machine-Learning-Implementation
 
-  multimodal-emotion:
-    upstream: https://github.com/2ai-lab/multimodal-emotion.git
-    branch: master
-    mode: mirror
+  - name: sanskrit_maskedlm
+    fork: USD-AI-ResearchLab/sanskrit_maskedlm
+    upstream: 2ai-lab/sanskrit_maskedlm
 
-  Superpixels-in-graph-neural-network:
-    upstream: https://github.com/2ai-lab/Superpixels-in-graph-neural-network.git
-    branch: master
-    mode: mirror
+  - name: explorers
+    fork: USD-AI-ResearchLab/explorers
+    upstream: 2ai-lab/explorers
 
-  Ensemble-DCNN:
-    upstream: https://github.com/2ai-lab/Ensemble-DCNN.git
-    branch: main
-    mode: mirror
+  - name: Multimodal_Learning
+    fork: USD-AI-ResearchLab/Multimodal_Learning
+    upstream: 2ai-lab/Multimodal_Learning
 
-  deep-features-covid-screening:
-    upstream: https://github.com/2ai-lab/deep-features-covid-screening.git
-    branch: main
-    mode: mirror
+  - name: Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading
+    fork: USD-AI-ResearchLab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading
+    upstream: 2ai-lab/Optimized-Vision-Transformer-Training-using-GPU-and-Multi-threading
 
-  streamlit-image-classification:
-    upstream: https://github.com/2ai-lab/streamlit-image-classification.git
-    branch: master
-    mode: mirror
+  - name: DeepWhaleNet
+    fork: USD-AI-ResearchLab/DeepWhaleNet
+    upstream: 2ai-lab/DeepWhaleNet
 
-  2AI-Club-Presentations:
-    upstream: https://github.com/2ai-lab/2AI-Club-Presentations.git
-    branch: main
-    mode: mirror
+  - name: Active-Learning
+    fork: USD-AI-ResearchLab/Active-Learning
+    upstream: 2ai-lab/Active-Learning
 
-  2AI-Club-Code:
-    upstream: https://github.com/2ai-lab/2AI-Club-Code.git
-    branch: main
-    mode: mirror
+  - name: LLNs-for-Early-Breast-Cancer-Detection
+    fork: USD-AI-ResearchLab/LLNs-for-Early-Breast-Cancer-Detection
+    upstream: 2ai-lab/LLNs-for-Early-Breast-Cancer-Detection
 
-  flax:
-    upstream: https://github.com/2ai-lab/flax.git
-    branch: main
-    mode: mirror
+  - name: attnconcat
+    fork: USD-AI-ResearchLab/attnconcat
+    upstream: 2ai-lab/attnconcat
 
-  medical-imaging-datasets:
-    upstream: https://github.com/2ai-lab/medical-imaging-datasets.git
-    branch: master
-    mode: mirror
+  - name: 2ai-lab.github.io
+    fork: USD-AI-ResearchLab/2ai-lab.github.io
+    upstream: 2ai-lab/2ai-lab.github.io
 
-  python-series:
-    upstream: https://github.com/2ai-lab/python-series.git
-    branch: main
-    mode: mirror
+  - name: Machine-Learning-Tools
+    fork: USD-AI-ResearchLab/Machine-Learning-Tools
+    upstream: 2ai-lab/Machine-Learning-Tools
 
-  Graph-Neural-Network:
-    upstream: https://github.com/2ai-lab/Graph-Neural-Network.git
-    branch: main
-    mode: mirror
+  - name: courses
+    fork: USD-AI-ResearchLab/courses
+    upstream: 2ai-lab/courses
 
-  Machine-Learning-Tools:
-    upstream: https://github.com/2ai-lab/Machine-Learning-Tools.git
-    branch: main
-    mode: mirror
+  - name: PATL
+    fork: USD-AI-ResearchLab/PATL
+    upstream: 2ai-lab/PATL
 
-  Aneurysm_Detection:
-    upstream: https://github.com/2ai-lab/Aneurysm_Detection.git
-    branch: main
-    mode: mirror
+  - name: Graph-Neural-Network
+    fork: USD-AI-ResearchLab/Graph-Neural-Network
+    upstream: 2ai-lab/Graph-Neural-Network
 
-  quant-club-website:
-    upstream: https://github.com/2ai-lab/quant-club-website.git
-    branch: main
-    mode: mirror
+  - name: Aneurysm_Detection
+    fork: USD-AI-ResearchLab/Aneurysm_Detection
+    upstream: 2ai-lab/Aneurysm_Detection
 
-  2ai-club.github.io:
-    upstream: https://github.com/2ai-lab/2ai-club.github.io.git
-    branch: main
-    mode: mirror
+  - name: quant-club-website
+    fork: USD-AI-ResearchLab/quant-club-website
+    upstream: 2ai-lab/quant-club-website
 
-  Winsor-CAM-demo:
-    upstream: https://github.com/2ai-lab/Winsor-CAM-demo.git
-    branch: main
-    mode: mirror
+  - name: 2ai-club.github.io
+    fork: USD-AI-ResearchLab/2ai-club.github.io
+    upstream: 2ai-lab/2ai-club.github.io
 
-  evidenceOfCovid:
-    upstream: https://github.com/2ai-lab/evidenceOfCovid.git
-    branch: main
-    disabled: true
-    mode: mirror
+  - name: evidenceOfCovid
+    fork: USD-AI-ResearchLab/evidenceOfCovid
+    upstream: Nickr234/evidenceOfCovid   # special case
 
-  ecg-classification:
-    upstream: https://github.com/2ai-lab/ecg-classification.git
-    branch: main
-    mode: mirror
+  - name: ecg-classification
+    fork: USD-AI-ResearchLab/ecg-classification
+    upstream: 2ai-lab/ecg-classification
 
-  Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease:
-    upstream: https://github.com/2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease.git
-    branch: master
-    mode: mirror
+  - name: Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease
+    fork: USD-AI-ResearchLab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease
+    upstream: 2ai-lab/Leveraging-Handwriting-Impairment-as-an-Early-Biomarker-for-Parkinson-Disease
 
-  doubleDistilBERT:
-    upstream: https://github.com/2ai-lab/doubleDistilBERT.git
-    branch: main
-    disabled: true
-    mode: mirror
+  - name: doubleDistilBERT
+    fork: USD-AI-ResearchLab/doubleDistilBERT
+    upstream: ORIGINAL_OWNER/doubleDistilBERT   # not clear yet, needs check
 
-  PATL:
-    upstream: https://github.com/2ai-lab/PATL.git
-    branch: main
-    mode: mirror
-
-  yolov7:
-    upstream: https://github.com/2ai-lab/yolov7.git
-    branch: main
-    mode: mirror
+  - name: yolov7
+    fork: USD-AI-ResearchLab/yolov7
+    upstream: 2ai-lab/yolov7
