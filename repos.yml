@@ -142,3 +142,11 @@ repos:
   - name: yolov7
     fork: USD-AI-ResearchLab/yolov7
     upstream: 2ai-lab/yolov7
+    
+    - name: open-gym-case-studies
+    fork: USD-AI-ResearchLab/open-gym-case-studies
+    upstream:  srikanthbaride/open-gym-case-studies
+
+    - name: Reinforcement-Learning-Explained-Code
+    fork: USD-AI-ResearchLab/Reinforcement-Learning-Explained-Code
+    upstream: srikanthbaride/Reinforcement-Learning-Explained-Code
